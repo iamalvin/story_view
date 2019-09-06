@@ -215,6 +215,8 @@ class StoryItem {
     String caption,
     bool shown = false,
     Map<String, dynamic> requestHeaders,
+    Widget topActionBar,
+    Widget bottomActionBar,
   }) {
     assert(imageFit != null, "[imageFit] should not be null");
     return StoryItem(
@@ -257,7 +259,9 @@ class StoryItem {
             ],
           ),
         ),
-        shown: shown);
+        shown: shown,
+        topActionBar: topActionBar,
+        bottomActionBar: bottomActionBar);
   }
 
   /// Shorthand for creating inline image page.
@@ -270,6 +274,8 @@ class StoryItem {
     bool shown = false,
     bool roundedTop = true,
     bool roundedBottom = false,
+    Widget topActionBar,
+    Widget bottomActionBar,
   }) {
     return StoryItem(
       Container(
@@ -311,6 +317,8 @@ class StoryItem {
         ),
       ),
       shown: shown,
+      topActionBar: topActionBar,
+      bottomActionBar: bottomActionBar
     );
   }
 }
